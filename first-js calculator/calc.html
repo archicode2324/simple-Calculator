@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      /* Basic styling for the calculator */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+
+      .calculator {
+        width: 300px;
+        margin: 50px auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .input-field {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        text-align: right;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      button {
+        padding: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e0e0e0;
+      }
+
+      button:active {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h2></h2>
+    <div class="calculator">
+      <input type="text" class="input-field" id="display" readonly />
+      <div class="buttons">
+        <button onclick="addToInput('7')">7</button>
+        <button onclick="addToInput('8')">8</button>
+        <button onclick="addToInput('9')">9</button>
+        <button onclick="addToInput('+')">+</button>
+        <button onclick="addToInput('4')">4</button>
+        <button onclick="addToInput('5')">5</button>
+        <button onclick="addToInput('6')">6</button>
+        <button onclick="addToInput('-')">-</button>
+        <button onclick="addToInput('1')">1</button>
+        <button onclick="addToInput('2')">2</button>
+        <button onclick="addToInput('3')">3</button>
+        <button onclick="addToInput('*')">*</button>
+        <button onclick="addToInput('0')">0</button>
+        <button onclick="addToInput('.')">.</button>
+        <button onclick="addToInput('/')">/</button>
+        <button onclick="calculate('=')">=</button>
+        <button onclick="clearInput('C')" class="funcbtn">Clear</button>
+      </div>
+    </div>
+    <button><a href="calc.html">white mode</a></button>
+    <button><a href="index.html">DARK MODE</a></button>
+
+   <script src="index.js"></script>
+  </body>
+</html>

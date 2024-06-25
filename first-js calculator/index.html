@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      .name {
+        padding: 0 !important;
+        font-size: 20px !important;
+        width: 100%;
+        object-fit: contain;
+        align-items: center;
+        color: white !important;
+        font-family: cambira;
+        font-weight: 1000;
+        font-size: 5rem;
+        font-style: normal;
+        animation-name: emex;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation: emex 5s ease-in-out 1s infinite direction fill-mode;
+        position: relative;
+      }
+      @keyframes emex {
+        0% {
+          background-color: hsl(0, 0%, 90%);
+        }
+        25% {
+          background-color: hsl(0, 0%, 75%);
+
+          /* right: 40px; */
+        }
+        50% {
+          background-color: hsl(0, 0%, 50%);
+          color: black;
+        }
+        75% {
+          background-color: hsl(0, 0%, 25%);
+        }
+
+        100% {
+          background-color: hsl(0, 0%, 0%);
+        }
+      }
+      /* Basic styling for the calculator */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #0c0b0b;
+      }
+
+      .calculator {
+        width: 300px;
+        margin: 50px auto;
+        background-color: hsl(0, 0%, 95%);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 19px rgba(0, 0, 0, 0.1);
+      }
+
+      .input-field {
+        width: 100%;
+        margin-bottom: 15px;
+        /* padding: 10px; */
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        text-align: right;
+        background-color: hsl(0, 3%, 12%);
+        box-shadow: hsl(0, 0%, 30%) 0 4px 2px 3px;
+        color: #fdf7f7;
+        font-size: 3rem;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        background-color: hsl(0, 0%, 100%);
+      }
+      .funcbtn {
+        background: hsl(0, 0%, 30%);
+        box-shadow: hsl(120, 2%, 10%) 0 4px 2px 3px;
+      }
+      button {
+        box-shadow: hsl(0, 0%, 30%) 0 4px 2px 3px;
+        color: white;
+        padding: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        background-color: hsl(120, 2%, 10%);
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .clearbtn {
+        background-color: red !important;
+      }
+
+      button:hover {
+        background-color: #000000;
+        /* color: white; */
+      }
+
+      button:active {
+        background-color: hsl(0, 0%, 80%);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="name">Archi_code</button>
+    <div class="calculator">
+      <input type="text" class="input-field" id="display" readonly />
+      <div class="buttons">
+        <button onclick="addToInput('7')">7</button>
+        <button onclick="addToInput('8')">8</button>
+        <button onclick="addToInput('9')">9</button>
+        <button onclick="addToInput('+')" class="funcbtn">+</button>
+        <button onclick="addToInput('4')">4</button>
+        <button onclick="addToInput('5')">5</button>
+        <button onclick="addToInput('6')">6</button>
+        <button onclick="addToInput('-')" class="funcbtn">-</button>
+        <button onclick="addToInput('1')">1</button>
+        <button onclick="addToInput('2')">2</button>
+        <button onclick="addToInput('3')">3</button>
+        <button onclick="addToInput('*')" class="funcbtn">*</button>
+        <button onclick="addToInput('0')">0</button>
+        <button onclick="addToInput('.')">.</button>
+        <button onclick="addToInput('/')">/</button>
+        <button onclick="calculate('=')" class="funcbtn">=</button>
+        <button onclick="clearInput('C')" class="clearbtn">Clear</button>
+      </div>
+    </div>
+    <button><a href="calc.html">white mode</a></button>
+    <button><a href="index.html">DARK MODE</a></button>
+    <script src="index.js"></script>
+  </body>
+</html>
